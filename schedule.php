@@ -58,15 +58,12 @@
     th.innerHTML = "Day";
     th = headerRow.insertCell();
     th.innerHTML = "Record Times";
-
   }
 
   function setDay(dayName, schedule, table) {
     var tr = table.insertRow();
     tr.id = dayName;
     var td = tr.insertCell();
-    //td.innerHTML = "<input type='checkbox'>";
-    //td = tr.insertCell();
     td.innerHTML = dayName;
     td = tr.insertCell();
     td.innerHTML = "";
@@ -96,9 +93,8 @@
   function hideTimeAdd(dayName) {
     var inputContent = document.getElementById(dayName+"TimeAdd");
     inputContent.innerHTML ="<span>&nbsp</span>";
-    inputContent.innerHTML +="<span onclick=\"showTimeAdd("+dayName+")\" class=\"addTime\">+</span>" + "\n";
+    inputContent.innerHTML +="<span onclick='showTimeAdd("+dayName+")' class='addTime'>+</span>" + "\n";
   }
-
 
   function getINISchedule(localSchedule) {
     var newSchedule = "";
@@ -109,7 +105,8 @@
       if(i+1 < localSchedule.length)
         newSchedule += ",";
     }
-    console.log(newSchedule);
+
+    //console.log(newSchedule);
     return newSchedule;
   }
 
@@ -168,7 +165,7 @@
         break;
     }
 
-    console.log(encode(schedule_file));
+    //console.log(encode(schedule_file));
 
     blobService.createBlockBlobFromText('configuration', 'config.ini', encode(schedule_file), function(error, result, response) {
     if (!error) {
@@ -234,8 +231,8 @@
         break;
     }
 
-    console.log(schedule);
-    console.log(encode(schedule_file));
+    //console.log(schedule);
+    //console.log(encode(schedule_file));
 
     blobService.createBlockBlobFromText('configuration', 'config.ini', encode(schedule_file), function(error, result, response) {
     if (!error) {
@@ -247,7 +244,6 @@
   }
 
   function loadSchedule(evt) {
-
     mondaySchedule=[];
     tuesdaySchedule=[];
     wednesdaySchedule=[];
@@ -279,7 +275,7 @@
         loadDay(fridaySchedule, schedule_file.Schedule.friday);
         loadDay(saturdaySchedule, schedule_file.Schedule.saturday);
         loadDay(sundaySchedule, schedule_file.Schedule.sunday);
-        console.log(encode(schedule_file));
+        //console.log(encode(schedule_file));
 
         updateScedule();
       }

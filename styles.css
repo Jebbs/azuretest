@@ -1,0 +1,121 @@
+.header {
+    height: 210px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    margin:0px auto;
+}
+
+.container {
+	border:2px solid #ccc;
+	width:100%;
+	height:50%;
+	overflow-y: scroll;
+	}
+
+	/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+#scheduleTable thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#scheduleTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#scheduleTable tbody tr:nth-child(odd){background-color: #f2f2f2;}
+#scheduleTable tbody tr:nth-child(even){background-color: #e2e2e2;}
+
+#downloadTable thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#downloadTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#downloadTable tbody tr:nth-child(odd){background-color: #f2f2f2;}
+#downloadTable tbody tr:nth-child(even){background-color: #e2e2e2;}
+
+.scheduleDisplay {
+    font-size: 16px;
+}
+
+/* Style the close button */
+.hidden {
+    margin-left:20px;
+    cursor: pointer;
+    display:none;
+    font-size: 16px;
+}
+
+.scheduleDisplay:hover .hidden { display:inline; }
+
+.hidden:hover {color: red;}
+
+.addTime {
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+}
+.addTimeSpace {
+
+}
+
+.scheduleDisplay:hover .addTime { display:inline; }
+
+.addTime:hover {color: red;}
+
+/* Set the size of the div element that contains the map */
+#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 400px;  /* The width is the width of the web page */
+        float: left;
+       }
+#curentStatus {
+    float: left;
+    margin-left: 50px;
+}
